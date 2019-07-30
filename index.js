@@ -32,6 +32,7 @@ function getParks(baseURL, stateArr, maxResults, apiKey) {
   const url = baseURL + '?' + queryString + '&api_key=' + apiKey;
 
   console.log(url);
+  console.log(stateArr);
 
   fetch(url)
   .then(response => {
