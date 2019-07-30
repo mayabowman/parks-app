@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <div class='container'>
+    <h1>National Parks Finder</h1>
+    <form id='search-form'>
+      <label for='park-search'>Search one or more states, separating the abbreviations with commas:</label>
+      <input type='text' name='park-search' id='user-search' required>
+      <label for='max-results'>Maximum results to return:</label>
+      <input type='number' name='max-results' id='user-max' value='10'>
+      <input type='submit' value='Go!'>
+    </form>
+    <p id='error-message'></p>
+    <section id='results' class='hidden'>
+      <ul id='results-list'></ul>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="index.js"></script>  
+</body>
+</html>
