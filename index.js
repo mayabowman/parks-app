@@ -23,13 +23,15 @@ function displayResults(responseJson) {
   $('#results').removeClass('hidden');
 }
 
-function getParks(apiKey, baseURL, stateArr, maxResults) {
+function getParks(baseURL, stateArr, maxResults, apiKey) {
   const params = {
     stateCode: stateArr,
     limit: maxResults
   }
   const queryString = formatQueryParams(params);
   const url = baseURL + '?' + queryString + '&api_key=' + apiKey;
+
+  console.log(url);
 
   fetch(url)
   .then(response => {
