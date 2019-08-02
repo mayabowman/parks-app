@@ -1,7 +1,8 @@
 'use strict';
-
 function formatQueryParams(params) {
+  // return array of object keys, creates new array
   const queryItems = Object.keys(params).map(key => `${[encodeURIComponent(key)]}=${encodeURIComponent(params[key])}`);
+  // joins the formatted key and value, ready for get request
   return queryItems.join('&');
 }
 
